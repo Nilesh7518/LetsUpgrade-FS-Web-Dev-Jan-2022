@@ -2,11 +2,13 @@
 @import 'util.css';
 
 :root {
-    --yel:#FFD32D;
+    --yel:yellowgreen;
     --b1: #008E89;
     --b2: #085E7D;
     --b3: #084594;
     --wh: #F7F7F7;
+    --red:#F24A72;
+
     }
 
 *{
@@ -22,11 +24,15 @@ body {
 
 header {
     background-color: var(--b2); 
-    clip-path: polygon(0 0, 100% 0, 100% 55%, 0 100%);    
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);    
 }
 
 nav {
     background-color: var(--b2);
+}
+
+.links{
+    margin-left:3rem;
 }
 
 header nav .left a {
@@ -49,19 +55,43 @@ header nav .left a:hover {
 }
 
 .container{
-    width: 75%;
-    height: 46rem;
-    margin: 0px auto;    
-    background-color: red;
+    width: 75rem;
+    height: 38rem;
+    margin: 0px auto;  
+    padding: 0.625rem 0rem;  
 }
 
 .logo{
-    width: 3rem;
-    height: 3rem;
     margin-top: 0.9rem;
+    }
+
+.container .flex .left .logo .img-1{
+    width:2rem;
+    margin-left: 1rem;
+    position: absolute;
+    top: 0.6875rem;
+    left: 28rem;
+    opacity: 100;
 }
 
-.left img{
+.container .flex .left .logo .img-2{
+    width:2rem;
+    margin-left: 1rem;
+    position: absolute;
+    top: 0.6875rem;
+    left:28rem;
+    opacity: 0;
+}
+
+.container .flex .left .logo .img-1:hover{
+    opacity: 0;
+}
+
+.container .flex .left .logo .img-2:hover{
+    opacity: 100;
+}
+
+.container .flex .left .logo .img-2{
     width:2rem;
     margin-left: 1rem;
 }
@@ -80,7 +110,7 @@ header nav .left a:hover {
     margin-right: 1rem;
     border: 0.25rem solid transparent;
 }
-.btn-primary{
+.btn-primary {
     border: 0.25rem solid var(--b1);
     background-color: var(--b1);
 }
@@ -89,6 +119,7 @@ header nav .left a:hover {
     border: 0.25rem solid var(--b1);
     background-color: transparent;
     color: var(--b1);
+    cursor: pointer;
 }
 
 .btn-secondary{
@@ -96,6 +127,9 @@ header nav .left a:hover {
     background-color: transparent;
     color: var(--b1);
     width: 12rem;
+    cursor: pointer;
+    position: relative;
+    top: 12rem;
 }
 
 .btn-secondary:hover {
@@ -107,25 +141,217 @@ header nav .left a:hover {
 .hero {
     background-color: var(--b2);
     margin-top: 0.1rem;
+    position: relative;
 }
 
-.hero .left img{
-    width: 35rem;
+.hero .left .img-3{
+    width: 25rem;
     margin-left: 2rem;
+    position: absolute;
+    top: 0.625rem;
+    left:3.125rem;
+    opacity: 100;
+}
+
+.hero .left .img-4{
+    width: 25rem;
+    margin-left: 2rem;
+    position: absolute;
+    top: 0.625rem;
+    left:3.125rem;
+    opacity: 0;
+}
+
+.hero .left .img-3:hover{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.hero .left .img-4:hover{
+    opacity: 100;
+    cursor: pointer;
 }
 
 .hero .right {
-    margin-left: 10rem;
-    margin-right: 2rem;
+    position: absolute;
+    top: 9.375rem;
+    left:40.625rem;
+    margin-right:3.125rem;
+    }
+
+
+.hero .right h1{
+    margin-top: 0.1rem;
+    font-size: 4rem;
 }
 
-.hero .left {
-    margin-left: 10rem;
-    margin-right: 2rem;
-    height: auto;
+.hero .right h1 .nilesh{
+   color: var(--yel);
+   text-shadow: 0.0625rem 0.1875rem 0.5rem black;
+   transition: 0.2s ease;
+}
+
+.hero .right h1 .nilesh:hover{
+    transform: rotate(45deg);
+    text-transform: uppercase;
+    color: var(--b1);
+    cursor: pointer;
+}
+
+.hero .right h6{
+    font-size: 0.8rem;
 }
 
 .hero .right p{
     font-family: roboto;
     font-weight: 100;
+    line-height: 125%;    
 }
+
+.skills{
+    width: 75rem;
+    margin: 0rem auto; 
+}
+
+.skills .heading, .skill-para {
+    margin: 1rem auto 0rem auto;   
+}
+
+.skill-heading{
+    margin-top:5rem;
+}
+
+.skill-span{
+    font-size: 2.2rem;
+    color: var(--b1);
+}
+
+.skill-lup{
+    /* font-size: 2.2rem; */
+    color: var(--red);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.soft-left{
+    width: 10rem;
+    height: 10rem;
+    background-color: rgb(226, 222, 222);
+    border: 0.25rem solid rgb(226, 222, 222);
+    border-radius: 0.5rem;   
+    box-shadow: 0 0 0.5rem 0.2rem rgb(192, 190, 190);    
+    margin: 1.5rem auto;         
+}
+
+.heading{
+    width: 75rem;
+    margin: 1rem auto 0rem auto;   
+}
+
+.code-heading{
+    width: 75rem;
+    margin: 4rem auto 0rem auto;   
+}
+
+.grid-graphics{
+    /* background-color: pink; */
+    width: 75rem;
+    height: 10rem;
+    margin: 1.5rem auto 0rem auto;
+    display: grid;
+    grid-template-columns: 11rem 11rem 11rem 11rem 11rem 11rem;
+    grid-template-rows: 11rem 11rem 11rem 11rem 11rem 11rem;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+ }
+
+ .grid-lang{
+    /* background-color: pink; */
+    width: 75rem;
+    height: 20rem;
+    margin: 1.5rem auto 0rem auto;
+    display: grid;
+    grid-template-columns: 11rem 11rem 11rem 11rem 11rem 11rem;
+    grid-template-rows: 11rem 11rem 11rem 11rem 11rem 11rem;
+    row-gap: 2.3rem;
+    column-gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+ }
+
+.grid-item{
+    background-color: yellow;
+    width: 10rem;
+    height: 10rem;
+    background-color: rgb(226, 222, 222);
+    border: 0.25rem solid rgb(226, 222, 222);
+    border-radius: 0.5rem;   
+    box-shadow: 0 0 0.5rem 0.2rem rgb(192, 190, 190);    
+ }
+
+.lang-logo: hover{
+cursor: pointer;
+rotate: 2deg;
+}
+
+.myself{
+    width: 75rem;
+    height: 40rem;
+    margin: 1.5rem auto 0rem auto;
+    background-color: var(--b2);
+    position: relative;
+}
+
+.img-4{
+    width: 25rem;
+}
+
+.img-4:hover{
+    width:35rem;
+    cursor: pointer;
+}
+
+.myself .left{
+    position: absolute;
+    top: 1.2rem;
+    left:3.125rem;
+    
+}
+
+.myself .right {
+    position: absolute;
+    top: 17rem;
+    left:40.625rem;
+    margin-right:3.125rem;
+    text-align: right;
+    }
+
+    .myself .right h1{
+        margin-top: 0.1rem;
+        font-size: 2rem;
+    }
+    
+    .myself .right .aboutme{
+       color: var(--yel);
+       text-shadow: 0.0625rem 0.1875rem 0.5rem black;
+       transition: 0.2s ease;
+    }
+    
+    .myself .right p{
+        font-family: roboto;
+        font-weight: 100;
+        line-height: 125%;    
+
+    .new{
+    background-color: red; 
+    width:100%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);    
+    }
+
+    .new .myself .right .social{
+        width:10rem;
+        margin-top: 10rem;
+        background-color: #F24A72;
+    }
